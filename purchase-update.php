@@ -65,7 +65,7 @@ Purchases
 				echo "<p style='font-size:8; color:red;'>Error! Unable to update.</p>";
 		 }
 	?>
-			<h2 style="font-family:Arial; color:white; text-align:center;"> PHARMACIA </h2>
+			<h2 style="font-family:Arial; color:white; text-align:center;"> AUSADHI KINMEL </h2>
 			<a href="adminmainpage.php">Dashboard</a>
 			<button class="dropdown-btn">Inventory
 			<i class="down"></i>
