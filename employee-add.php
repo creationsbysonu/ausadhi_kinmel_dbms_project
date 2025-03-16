@@ -97,9 +97,16 @@ Employees
 		$phno = mysqli_real_escape_string($conn, $_REQUEST['ephno']);
 		$mail = mysqli_real_escape_string($conn, $_REQUEST['e_mail']);
 		$add = mysqli_real_escape_string($conn, $_REQUEST['eadd']);
-
+		$pass = mysqli_real_escape_string($conn, $_REQUEST['pass']);
 		 
-		$sql = "INSERT INTO employee VALUES ($id, '$fname','$lname','$bdate',$age,'$sex','$etype','$jdate','$sal',$phno, '$mail','$add')";
+		$sql = "INSERT INTO employee VALUES ($id, '$fname','$lname','$bdate',$age,'$sex','$etype','$jdate','$sal',$phno, '$mail','$add','$pass')";
+		if(mysqli_query($conn, $sql)){
+			echo "<p style='font-size:8;'>Employee successfully added!</p>";
+		} else{
+			echo "<p style='font-size:8; color:red;'>Error! Check details.</p>";
+		}
+
+		$sql = "INSERT INTO emplogin VALUES ($id, '$username',$pass')";
 		if(mysqli_query($conn, $sql)){
 			echo "<p style='font-size:8;'>Employee successfully added!</p>";
 		} else{
@@ -172,6 +179,14 @@ Employees
 					<p>
 						<label for="eadd">Address:</label><br>
 						<input type="text" name="eadd">
+					</p>
+					<p>
+						<label for="eadd">Username:</label><br>
+						<input type="text" name="username">
+					</p>
+					<p>
+						<label for="eadd">Password:</label><br>
+						<input type="text" name="pass">
 					</p>
 					
 				</div>
