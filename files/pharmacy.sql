@@ -130,13 +130,9 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`C_ID`, `C_FNAME`, `C_LNAME`, `C_AGE`, `C_SEX`, `C_PHNO`, `C_MAIL`) VALUES
-('987101', 'Safia', 'Malik', 22, 'Female', '9632587415', 'safia@gmail.com'),
-('987102', 'Varun', 'Ilango', 24, 'Male', '9987565423', 'varun@gmail.com'),
-('987103', 'Suja', 'Suresh', 45, 'Female', '7896541236', 'suja@hotmail.com'),
-('987104', 'Agatha', 'Elizabeth', 30, 'Female', '7845129635', 'agatha@gmail.com'),
-('987105', 'Zayed', 'Shah', 40, 'Male', '6789541235', 'zshah@hotmail.com'),
-('987106', 'Vijay', 'Kumar', 60, 'Male', '8996574123', 'vijayk@yahoo.com'),
-('987107', 'Meera', 'Das', 35, 'Female', '7845963259', 'meera@gmail.com');
+('0000001', 'Sonu', 'Gupta', 22, 'male', '9819094640', 'sonugupta.ioepc.edu.np@gmail.com'),
+('0000002', 'Nigam', 'Yadav', 22, 'male', '9806285040', 'nigamyadav72@gmail.com');
+
 
 -- --------------------------------------------------------
 
@@ -155,13 +151,8 @@ CREATE TABLE `emplogin` (
 --
 
 INSERT INTO `emplogin` (`E_ID`, `E_USERNAME`, `E_PASS`) VALUES
-('4567005', 'amaya', 'pass1'),
-('4567002', 'anita', 'pass2'),
-('4567010', 'daniel', 'pass3'),
-('4567003', 'harish', 'pass4'),
-('4567009', 'shayla', 'pass5'),
-('4567006', 'shoaib', 'pass6'),
-('4567001', 'varshini', 'pass7');
+('1234567', 'sakxam', 'sakxam123');
+
 
 -- --------------------------------------------------------
 
@@ -190,7 +181,6 @@ CREATE TABLE `employee` (
 
 INSERT INTO `employee` (`E_ID`, `E_FNAME`, `E_LNAME`, `BDATE`, `E_AGE`, `E_SEX`, `E_TYPE`, `E_JDATE`, `E_SAL`, `E_PHNO`, `E_MAIL`, `E_ADD`) VALUES
 ('1', 'Admin', '-', '1989-05-24', 30, 'Female', 'Admin', '2009-06-24', '95000.00', '9874563219', 'admin@pharmacia.com', 'Chennai'),
-('4567001', 'Varshini', 'Elangovan', '1995-10-05', 25, 'Female', 'Pharmacist', '2017-11-12', '25000.00', '9967845123', 'evarsh@hotmail.com', 'Thiruvanmiyur'),
 ('4567002', 'Anita', 'Shree', '2000-10-03', 20, 'Female', 'Pharmacist', '2012-10-06', '45000.00', '8546123566', 'anita@gmail.com', 'Adyar'),
 ('4567003', 'Harish', 'Raja', '1998-02-01', 22, 'Male', 'Pharmacist', '2019-07-06', '21000.00', '7854123694', 'harishraja@live.com', 'T.Nagar'),
 ('4567005', 'Amaya', 'Singh', '1992-01-02', 28, 'Female', 'Pharmacist', '2017-05-16', '32000.00', '7894532165', 'amaya@gmail.com', 'Kottivakkam'),
