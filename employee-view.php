@@ -73,7 +73,7 @@ Employees
 	</div>
 	</center>
 	
-	<table align="right" id="table1" style="margin-right:20px;">
+	<table align="right" id="table1" style="margin-right: 20px; width: 80%; font-size: 80%;">
 		<tr>
 			<th>Employee ID</th>
 			<th>First Name</th>
