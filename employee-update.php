@@ -104,10 +104,12 @@ Employees
 			$phno = mysqli_real_escape_string($conn, $_REQUEST['ephno']);
 			$mail = mysqli_real_escape_string($conn, $_REQUEST['e_mail']);
 			$add = mysqli_real_escape_string($conn, $_REQUEST['eadd']);
+			$username = mysqli_real_escape_string($conn, $_REQUEST['username']);
+			$pass = mysqli_real_escape_string($conn, $_REQUEST['pass']);
 			 
 		$sql="UPDATE employee
 			SET e_fname='$fname',e_lname='$lname',bdate='$bdate',e_age='$age',e_sex='$sex',
-			e_type='$etype',e_jdate='$jdate',e_sal='$sal',e_phno='$phno',e_mail='$mail',e_add='$add' where e_id='$id'";
+			e_type='$etype',e_jdate='$jdate',e_sal='$sal',e_phno='$phno',e_mail='$mail',e_add='$add', e_username='$username', e_pass='$pass' where e_id='$id'";
 			
 		if ($conn->query($sql))
 		header("location:employee-view.php");
@@ -169,6 +171,14 @@ Employees
 					<p>
 						<label for="eadd">Address:</label><br>
 						<input type="text" name="eadd"  value="<?php echo $row[11]; ?>">
+					</p>
+					<p>
+						<label for="username">Username:</label><br>
+						<input type="text" name="username">
+					</p>
+					<p>
+						<label for="pass">Password:</label><br>
+						<input type="text" name="pass">
 					</p>
 					
 				</div>

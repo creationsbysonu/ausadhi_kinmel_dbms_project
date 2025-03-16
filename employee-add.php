@@ -97,21 +97,24 @@ Employees
 		$phno = mysqli_real_escape_string($conn, $_REQUEST['ephno']);
 		$mail = mysqli_real_escape_string($conn, $_REQUEST['e_mail']);
 		$add = mysqli_real_escape_string($conn, $_REQUEST['eadd']);
-		$pass = mysqli_real_escape_string($conn, $_REQUEST['pass']);
+		$username = mysqli_real_escape_string($conn, $_REQUEST['eusername']);
+		$pass = mysqli_real_escape_string($conn, $_REQUEST['epass']);
 		 
-		$sql = "INSERT INTO employee VALUES ($id, '$fname','$lname','$bdate',$age,'$sex','$etype','$jdate','$sal',$phno, '$mail','$add','$pass')";
+		$sql = "INSERT INTO employee VALUES ($id, '$fname','$lname','$bdate',$age,'$sex','$etype','$jdate','$sal',$phno, '$mail','$add','$username','$pass')";
 		if(mysqli_query($conn, $sql)){
 			echo "<p style='font-size:8;'>Employee successfully added!</p>";
 		} else{
 			echo "<p style='font-size:8; color:red;'>Error! Check details.</p>";
 		}
 
-		$sql = "INSERT INTO emplogin VALUES ($id, '$username',$pass')";
+		$sql = "INSERT INTO emplogin VALUES ($id,'$username','$pass')";
 		if(mysqli_query($conn, $sql)){
-			echo "<p style='font-size:8;'>Employee successfully added!</p>";
+			echo "<p style='font-size:8;'>Employee successfully created!</p>";
 		} else{
 			echo "<p style='font-size:8; color:red;'>Error! Check details.</p>";
 		}
+
+	
 		
 	}
 		 
@@ -181,12 +184,12 @@ Employees
 						<input type="text" name="eadd">
 					</p>
 					<p>
-						<label for="eadd">Username:</label><br>
-						<input type="text" name="username">
+						<label for="eusername">Username:</label><br>
+						<input type="text" name="eusername">
 					</p>
 					<p>
-						<label for="eadd">Password:</label><br>
-						<input type="text" name="pass">
+						<label for="epass">Password:</label><br>
+						<input type="text" name="epass">
 					</p>
 					
 				</div>

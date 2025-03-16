@@ -172,21 +172,15 @@ CREATE TABLE `employee` (
   `E_SAL` decimal(8,2) NOT NULL,
   `E_PHNO` decimal(10,0) NOT NULL,
   `E_MAIL` varchar(40) DEFAULT NULL,
-  `E_ADD` varchar(40) DEFAULT NULL
+  `E_ADD` varchar(40) DEFAULT NULL,
+  `E_USERNAME` varchar(40) DEFAULT NULL,
+  `E_PASS` varchar(40) DEFAULT NULL
 ) ;
 
---
--- Dumping data for table `employee`
---
-
-INSERT INTO `employee` (`E_ID`, `E_FNAME`, `E_LNAME`, `BDATE`, `E_AGE`, `E_SEX`, `E_TYPE`, `E_JDATE`, `E_SAL`, `E_PHNO`, `E_MAIL`, `E_ADD`) VALUES
-('1', 'Admin', '-', '1989-05-24', 30, 'Female', 'Admin', '2009-06-24', '95000.00', '9874563219', 'admin@pharmacia.com', 'Chennai'),
-('4567002', 'Anita', 'Shree', '2000-10-03', 20, 'Female', 'Pharmacist', '2012-10-06', '45000.00', '8546123566', 'anita@gmail.com', 'Adyar'),
-('4567003', 'Harish', 'Raja', '1998-02-01', 22, 'Male', 'Pharmacist', '2019-07-06', '21000.00', '7854123694', 'harishraja@live.com', 'T.Nagar'),
-('4567005', 'Amaya', 'Singh', '1992-01-02', 28, 'Female', 'Pharmacist', '2017-05-16', '32000.00', '7894532165', 'amaya@gmail.com', 'Kottivakkam'),
-('4567006', 'Shoaib', 'Ahmed', '1999-12-11', 20, 'Male', 'Pharmacist', '2018-09-05', '28000.00', '7896541234', 'shoaib@hotmail.com', 'Porur'),
-('4567009', 'Shayla', 'Hussain', '1980-02-28', 40, 'Female', 'Manager', '2010-05-06', '80000.00', '7854123695', 'shaylah@gmail.com', 'Adyar'),
-('4567010', 'Daniel', 'James', '1993-04-05', 27, 'Male', 'Pharmacist', '2016-01-05', '30000.00', '7896541235', 'daniels@gmail.com', 'Kodambakkam');
+INSERT INTO `employee` (`E_ID`, `E_FNAME`, `E_LNAME`, `BDATE`, `E_AGE`, `E_SEX`, `E_TYPE`, `E_JDATE`, `E_SAL`, `E_PHNO`, `E_MAIL`, `E_ADD`, `E_USERNAME`, `E_PASS`) VALUES
+('1', 'Admin', '-', '1989-05-24', 30, 'Female', 'Admin', '2009-06-24', '95000.00', '9874563219', 'admin@pharmacia.com', 'Chennai', 'Admin', 'pass'),
+('4567002', 'Anita', 'Shree', '2000-10-03', 20, 'Female', 'Pharmacist', '2012-10-06', '45000.00', '8546123566', 'anita@gmail.com', 'Adyar', 'Anita', 'anita123'),
+('4567010', 'Daniel', 'James', '1993-04-05', 27, 'Male', 'Pharmacist', '2016-01-05', '30000.00', '7896541235', 'daniels@gmail.com', 'Kodambakkam', 'Daniel', 'daniel123');
 
 -- --------------------------------------------------------
 

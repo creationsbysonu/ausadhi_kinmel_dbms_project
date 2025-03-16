@@ -87,13 +87,15 @@ Employees
 			<th>Phone Number</th>
 			<th>Email Address</th>
 			<th>Home Address</th>
+			<th>Username</th>
+			<th>Password</th>
 			<th>Action</th>
 		</tr>
 		
 	<?php
 	
 	include "config.php";
-	$sql = "SELECT e_id, e_fname, e_lname, bdate, e_age, e_sex, e_type, e_jdate, e_sal, e_phno, e_mail, e_add FROM employee where e_id<>1";
+	$sql = "SELECT e_id, e_fname, e_lname, bdate, e_age, e_sex, e_type, e_jdate, e_sal, e_phno, e_mail, e_add, e_username, e_pass FROM employee where e_id<>1";
 	$result = $conn->query($sql);
 	
 	if ($result->num_rows > 0) {
@@ -113,6 +115,8 @@ Employees
 		echo "<td>" . $row["e_phno"]. "</td>";
 		echo "<td>" . $row["e_mail"]. "</td>";
 		echo "<td>" . $row["e_add"]. "</td>";
+		echo "<td>" . $row["e_username"]. "</td>";
+		echo "<td>" . $row["e_pass"]. "</td>";
 		echo "<td align=center>";
 		echo "<a class='button1 edit-btn' href=employee-update.php?id=".$row['e_id'].">Edit</a>";
 		echo "<a onclick='return confirm('Are you sure to delete?');' class='button1 del-btn' href=employee-delete.php?id=".$row['e_id'].">Delete</a>";
